@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useEffect } from "react";
+import Image from "next/image";
 
 export default function PhoneMockup() {
   const mouseX = useMotionValue(0);
@@ -105,10 +106,13 @@ export default function PhoneMockup() {
           }}
           className="relative w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] lg:w-[470px] lg:h-[470px] xl:w-[520px] xl:h-[520px] flex items-center justify-center"
         >
-          <img
+          <Image
             src="/phone-mockup-new.png"
             alt="Fizens Phone Mockup"
-            className="w-full h-full object-contain pointer-events-none"
+            fill
+            sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, (max-width: 1024px) 420px, (max-width: 1280px) 470px, 520px"
+            priority
+            className="object-contain pointer-events-none"
             style={{
               clipPath: "inset(0 0 11.5% 0)",
             }}

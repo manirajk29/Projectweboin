@@ -4,11 +4,9 @@
   --font-sans: var(--font-plus-jakarta-sans), ui-sans-serif, system-ui, sans-serif;
   --color-brand-blue: #0047FF;
   --color-brand-dark-blue: #0037BB;
-  --color-brand-light-blue: #E8EFFF;
   --color-brand-soft-blue: #EEF4FF;
   --color-text-dark: #090A0C;
   --color-text-gray: #5F697C;
-  --color-text-light-gray: #8E9AA8;
 
   --animate-marquee-left: marquee-left 90s linear infinite;
 

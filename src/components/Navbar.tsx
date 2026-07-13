@@ -65,14 +65,14 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 className={`relative px-4 py-2 text-[15px] font-medium transition-all duration-200 rounded-full flex items-center gap-1.5 ${
                   item.active
-                    ? "bg-[#EEF4FF] text-brand-blue"
+                    ? "bg-brand-soft-blue text-brand-blue"
                     : "text-text-gray hover:text-text-dark"
                 }`}
               >
@@ -85,7 +85,7 @@ export default function Navbar() {
           </nav>
 
           {/* Desktop Call to Action */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <motion.a
               href="#"
               whileHover={{ scale: 1.03 }}
@@ -99,7 +99,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-1 text-text-gray hover:text-text-dark transition-colors focus:outline-none"
+            className="lg:hidden p-1 text-text-gray hover:text-text-dark transition-colors focus:outline-none"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -119,7 +119,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-20 left-[4%] w-[92%] bg-white border border-gray-100 rounded-3xl p-6 shadow-xl z-40 md:hidden flex flex-col gap-4"
+            className="fixed top-20 left-[4%] w-[92%] bg-white border border-gray-100 rounded-3xl p-6 shadow-xl z-40 lg:hidden flex flex-col gap-4"
           >
             <div className="flex flex-col gap-2">
               {navItems.map((item) => (
@@ -129,7 +129,7 @@ export default function Navbar() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`px-4 py-3 rounded-xl text-[16px] font-semibold flex items-center gap-2 ${
                     item.active
-                      ? "bg-[#EEF4FF] text-brand-blue"
+                      ? "bg-brand-soft-blue text-brand-blue"
                       : "text-text-gray hover:bg-gray-50 hover:text-text-dark"
                   }`}
                 >

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import PhoneMockup from "./PhoneMockup";
 
 export default function Hero() {
@@ -42,17 +43,17 @@ export default function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="lg:col-span-5 flex flex-col justify-center lg:-translate-y-36 items-start text-left z-20"
+          className="lg:col-span-5 flex flex-col justify-center lg:-translate-y-36 items-start text-left z-20 order-1"
         >
           <motion.h1
             variants={itemVariants}
-            className="text-[40px] sm:text-[48px] md:text-[56px] lg:text-[60px] font-medium tracking-tight text-text-dark leading-[1.08] flex flex-col gap-1.5"
+            className="text-[32px] sm:text-[48px] md:text-[56px] lg:text-[60px] font-medium tracking-tight text-text-dark leading-[1.08] flex flex-col gap-1.5"
           >
-            <span className="whitespace-nowrap">Start Managing</span>
-            <span className="whitespace-nowrap">Your Finance</span>
+            <span className="sm:whitespace-nowrap">Start Managing</span>
+            <span className="sm:whitespace-nowrap">Your Finance</span>
             <span className="text-text-gray font-normal flex items-center gap-3 sm:gap-4 mt-2">
               <span className="inline-block w-8 sm:w-20 h-[1.5px] bg-[#CFD4DC]" />
-              <span className="whitespace-nowrap">With Our Tool</span>
+              <span className="sm:whitespace-nowrap">With Our Tool</span>
             </span>
           </motion.h1>
 
@@ -83,7 +84,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-          className="lg:col-span-4 flex justify-center items-center h-[600px] lg:h-auto z-30 overflow-visible lg:-translate-y-20 lg:-translate-x-14 md:-translate-x-6"
+          className="lg:col-span-4 flex justify-center items-center h-[300px] sm:h-[380px] md:h-[450px] lg:h-auto z-30 overflow-visible lg:-translate-y-20 lg:-translate-x-14 order-3 lg:order-2"
         >
           <PhoneMockup />
         </motion.div>
@@ -93,7 +94,7 @@ export default function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="lg:col-span-3 flex flex-col justify-between py-8 lg:py-14 z-20"
+          className="lg:col-span-3 flex flex-col justify-between gap-8 lg:gap-0 py-8 lg:py-14 z-20 order-2 lg:order-3"
         >
           {/* Top block */}
           <motion.div variants={itemVariants} className="flex flex-col items-start gap-4 lg:-translate-y-12">
@@ -129,12 +130,14 @@ export default function Hero() {
                 ].map((src, i) => (
                   <div
                     key={i}
-                    className="w-11 h-11 rounded-full border-2 border-white overflow-hidden shadow-sm bg-gray-100 flex-shrink-0"
+                    className="w-11 h-11 rounded-full border-2 border-white overflow-hidden shadow-sm bg-gray-100 flex-shrink-0 relative"
                   >
-                    <img
+                    <Image
                       src={src}
                       alt={`User profile ${i + 1}`}
-                      className="w-full h-full object-cover"
+                      fill
+                      sizes="44px"
+                      className="object-cover"
                     />
                   </div>
                 ))}
