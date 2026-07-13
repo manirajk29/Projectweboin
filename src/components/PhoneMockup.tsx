@@ -103,12 +103,12 @@ export default function PhoneMockup() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="relative w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] lg:w-[470px] lg:h-[470px] flex items-center justify-center"
+          className="relative w-[300px] h-[300px] sm:w-[370px] sm:h-[370px] md:w-[460px] md:h-[460px] lg:w-[510px] lg:h-[510px] flex items-center justify-center"
         >
           <img
             src="/phone-mockup-new.png"
             alt="Fizens Phone Mockup"
-            className="w-full h-full object-contain scale-[1.2] md:scale-[1.35] pointer-events-none"
+            className="w-full h-full object-contain scale-[1.1] md:scale-[1.2] pointer-events-none"
             style={{
               clipPath: "inset(0 0 11.5% 0)",
             }}
