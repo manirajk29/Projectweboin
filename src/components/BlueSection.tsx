@@ -5,7 +5,7 @@ export default function BlueSection() {
   const marqueeText = "FINANCE MANAGEMENT • FINANCE MANAGEMENT • FINANCE MANAGEMENT • FINANCE MANAGEMENT • ";
 
   return (
-    <section className="relative w-[92%] max-w-[1240px] mx-auto -mt-40 md:-mt-56 lg:-mt-72 xl:-mt-80 mb-16 z-20">
+    <section className="relative w-[92%] max-w-[1240px] mx-auto mt-8 sm:mt-12 md:-mt-56 lg:-mt-72 xl:-mt-80 mb-16 z-20">
       {/* Container with rounded corners and royal blue gradient */}
       <div className="w-full bg-gradient-to-b from-brand-blue via-[#003BDD] to-[#0023A8] rounded-[36px] sm:rounded-[48px] lg:rounded-[56px] overflow-hidden py-16 sm:py-20 lg:py-24 px-6 md:px-12 flex flex-col items-center gap-12 sm:gap-16 shadow-[0_20px_50px_rgba(0,71,255,0.25)]">
 
@@ -30,10 +30,10 @@ export default function BlueSection() {
           </h2>
 
           {/* Logo Row */}
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 sm:gap-x-12 sm:gap-y-8 w-full mt-2">
+          <div className="grid grid-cols-3 gap-x-4 gap-y-6 lg:flex lg:flex-wrap lg:items-center lg:justify-center lg:gap-x-12 lg:gap-y-8 w-full mt-2">
 
             {/* Logo 1 - Shield */}
-            <div className="flex items-center gap-1.5 text-white/50 hover:text-white/90 transition-colors duration-200 cursor-pointer">
+            <div className="flex items-center justify-center gap-1.5 text-white/50 hover:text-white/90 transition-colors duration-200 cursor-pointer">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm0 2.18c3.48.96 6 4.19 6 7.91v4.73c0 3.65-2.26 7.02-6 8.09-3.74-1.07-6-4.44-6-8.09V12.1c0-3.72 2.52-6.95 6-7.92z" />
               </svg>
@@ -41,7 +41,7 @@ export default function BlueSection() {
             </div>
 
             {/* Logo 2 - Globe */}
-            <div className="flex items-center gap-1.5 text-white/50 hover:text-white/90 transition-colors duration-200 cursor-pointer">
+            <div className="flex items-center justify-center gap-1.5 text-white/50 hover:text-white/90 transition-colors duration-200 cursor-pointer">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10" />
                 <line x1="2" y1="12" x2="22" y2="12" />
@@ -51,7 +51,7 @@ export default function BlueSection() {
             </div>
 
             {/* Logo 3 - Target */}
-            <div className="flex items-center gap-1.5 text-white/50 hover:text-white/90 transition-colors duration-200 cursor-pointer">
+            <div className="flex items-center justify-center gap-1.5 text-white/50 hover:text-white/90 transition-colors duration-200 cursor-pointer">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <circle cx="12" cy="12" r="8" />
                 <circle cx="12" cy="12" r="3" />
@@ -64,7 +64,7 @@ export default function BlueSection() {
             </div>
 
             {/* Logo 4 - Star Diamond */}
-            <div className="flex items-center gap-1.5 text-white/50 hover:text-white/90 transition-colors duration-200 cursor-pointer">
+            <div className="flex items-center justify-center gap-1.5 text-white/50 hover:text-white/90 transition-colors duration-200 cursor-pointer">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2l2.4 7.2L22 11.6l-7.6 2.4L12 22l-2.4-7.6L2 11.6l7.6-2.4z" />
               </svg>
@@ -72,12 +72,12 @@ export default function BlueSection() {
             </div>
 
             {/* Logo 5 - IPSUM */}
-            <div className="flex items-center gap-1.5 text-white/50 hover:text-white/90 transition-colors duration-200 cursor-pointer">
+            <div className="flex items-center justify-center gap-1.5 text-white/50 hover:text-white/90 transition-colors duration-200 cursor-pointer">
               <span className="font-black italic text-[17px] sm:text-[18px] tracking-widest leading-none">IPSUM</span>
             </div>
 
             {/* Logo 6 - Slanted Bars */}
-            <div className="flex items-center gap-1.5 text-white/50 hover:text-white/90 transition-colors duration-200 cursor-pointer">
+            <div className="flex items-center justify-center gap-1.5 text-white/50 hover:text-white/90 transition-colors duration-200 cursor-pointer">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <rect x="4" y="6" width="3" height="12" rx="1" transform="skewX(-15)" />
                 <rect x="9" y="6" width="3" height="12" rx="1" transform="skewX(-15)" />

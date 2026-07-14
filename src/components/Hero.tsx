@@ -31,7 +31,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden flex flex-col justify-between z-30">
+    <section className="relative min-h-screen pt-32 pb-16 md:pt-40 md:pb-24 overflow-x-hidden flex flex-col justify-between z-30">
       {/* Background Decorative Grid Pattern */}
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none z-0" />
 
@@ -43,7 +43,7 @@ export default function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="lg:col-span-5 flex flex-col justify-center lg:-translate-y-36 items-start text-left z-20 order-1"
+          className="lg:col-span-5 flex flex-col justify-center lg:-translate-y-36 items-center text-center lg:items-start lg:text-left z-20 order-1"
         >
           <motion.h1
             variants={itemVariants}
@@ -51,9 +51,10 @@ export default function Hero() {
           >
             <span className="sm:whitespace-nowrap">Start Managing</span>
             <span className="sm:whitespace-nowrap">Your Finance</span>
-            <span className="text-text-gray font-normal flex items-center gap-3 sm:gap-4 mt-2">
+            <span className="text-text-gray font-normal flex items-center justify-center lg:justify-start gap-3 sm:gap-4 mt-2">
               <span className="inline-block w-8 sm:w-20 h-[1.5px] bg-[#CFD4DC]" />
               <span className="sm:whitespace-nowrap">With Our Tool</span>
+              <span className="inline-block w-8 sm:w-20 h-[1.5px] bg-[#CFD4DC]" />
             </span>
           </motion.h1>
 
@@ -84,7 +85,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-          className="lg:col-span-4 flex justify-center items-center h-[300px] sm:h-[380px] md:h-[450px] lg:h-auto z-30 overflow-visible lg:-translate-y-20 lg:-translate-x-14 order-3 lg:order-2"
+          className="lg:col-span-4 flex justify-center items-center h-auto py-6 md:py-10 lg:py-0 z-30 overflow-visible lg:-translate-y-20 lg:-translate-x-14 order-2 lg:order-2"
         >
           <PhoneMockup />
         </motion.div>
@@ -94,10 +95,10 @@ export default function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="lg:col-span-3 flex flex-col justify-between gap-8 lg:gap-0 py-8 lg:py-14 z-20 order-2 lg:order-3"
+          className="lg:col-span-3 flex flex-col justify-between gap-8 lg:gap-0 py-8 lg:py-14 z-20 order-3 lg:order-3 items-center lg:items-start text-center lg:text-left"
         >
           {/* Top block */}
-          <motion.div variants={itemVariants} className="flex flex-col items-start gap-4 lg:-translate-y-12">
+          <motion.div variants={itemVariants} className="hidden lg:flex flex-col items-start gap-4 lg:-translate-y-12">
             {/* Thin Elegant Plus Icon */}
             <div className="relative w-8 h-8 flex items-center justify-center">
               <svg
@@ -119,8 +120,8 @@ export default function Hero() {
           </motion.div>
 
           {/* Bottom block (Avatar group) */}
-          <motion.div variants={itemVariants} className="flex flex-col gap-3 lg:-translate-y-56">
-            <div className="flex items-center gap-3.5">
+          <motion.div variants={itemVariants} className="flex flex-col items-center lg:items-start gap-3 lg:-translate-y-56">
+            <div className="flex flex-col lg:flex-row items-center gap-3 lg:gap-3.5">
               {/* Overlapping Avatars */}
               <div className="flex items-center -space-x-4">
                 {[
@@ -148,7 +149,11 @@ export default function Hero() {
               </span>
             </div>
 
-            <p className="text-[13px] sm:text-[14px] text-text-gray font-normal leading-[1.5] max-w-[240px]">
+            <p className="block lg:hidden text-[15px] text-text-dark font-normal leading-[1.6] max-w-[290px] mt-2">
+              Simplify your financial life. Our intuitive app makes managing your money effortless.
+            </p>
+
+            <p className="hidden lg:block text-[13px] sm:text-[14px] text-text-gray font-normal leading-[1.5] max-w-[240px]">
               Trusted to use by millions users over 140 countries
             </p>
           </motion.div>
